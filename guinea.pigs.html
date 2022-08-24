@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guinea Pigs 🐹</title>
+    <style>
+      body {
+        background-color: lavender;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: linear-gradient(
+          110.5deg,
+          rgba(248, 196, 249, 0.66) 22.8%,
+          rgba(253, 122, 4, 0.15) 64.6%
+        );
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        display: block;
+        background: plum;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 4px;
+        text-size: 14px;
+      }
+
+      hr {
+        display: block;
+        align: center;
+        margin: 15px auto;
+        border: 1px solid lightblue;
+        border-radius: 2px;
+
+        width: 95%;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+      }
+
+      a {
+        margin-top: 10px;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      p {
+        line-height: 1.5;
+        display: block;
+      }
+
+      .secondSentence {
+        margin: 0 auto;
+      }
+
+      .learn-more {
+        display: block;
+        margin-top: 15px;
+        text-decoration: none;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+        color: #ccccea;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background-color: #8ef6e4;
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+        padding: 20px 30px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: 350ms;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        background-color: #9896f1;
+        color: white;
+      }
+
+      .footer {
+        text-align: center;
+        margin: 100px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .fat {
+        text-decoration: underline;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love Guinea Pigs 🐹🐹</h1>
+      <h2><em>Especially</em> the <span class="fat">fat</span> ones!</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/466/original/206528_524803981623_9653_n.jpeg?1661372944"
+        alt="Two Guinea Pigs In A Box"
+      />
+
+      <p class="firstSentence">
+        <strong>Guinea pigs</strong> come in all kinds of breeds. There are
+        short hair, long haired, curly haired and even spiked hair ones! They
+        tend to do better in pairs, but some enjoy their alone time, too.
+      </p>
+
+      <p class="secondSentence">
+        A guinea pig makes a great first pet, but they do require daily feeding
+        and watering. Ideally, parents help children with daily responsibilities
+        until the child feels comfortable on their own.
+      </p>
+
+      <a
+        href="https://en.wikipedia.org/wiki/Guinea_pig"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on Wikipedia
+      </a>
+      <br />
+      <button class="questionButton">👉 Tell Me About Your Pigs ...</button>
+      <p class="footer">
+        This page was built by
+        <a href="https://instagram.com/GamerGirlGameboyMods" target="_blank">
+          Katie Danger</a
+        >.
+      </p>
+    </div>
+    <script>
+      function greeting() {
+        let name = prompt("What is your name?");
+        let pigQuantity = prompt(
+          "Hey " + name + " how many guinea pigs do you have?"
+        );
+        let heading = document.querySelector("h2");
+
+        alert("Check the page for a special message! 😉");
+
+        if (pigQuantity >= 3) {
+          heading.innerHTML = "I love it! 👏 You have a lot of guinea pigs! 👏";
+        } else {
+          heading.innerHTML = "You should get more pigs! 😆";
+        }
+      }
+
+      let questionButton = document.querySelector("button");
+      questionButton.addEventListener("click", greeting);
+    </script>
+  </body>
+</html>
